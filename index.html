@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venda de Veículo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        
+        <div class="galeria-container">
+            <div class="visualizador-principal" id="fotoPrincipal">
+                <button class="seta seta-esquerda" onclick="mudarFoto(-1)">&#10094;</button>
+                <button class="seta seta-direita" onclick="mudarFoto(1)">&#10095;</button>
+            </div>
+            
+            <div class="miniaturas-grid">
+                <div class="foto-miniatura ativa" onclick="selecionarFoto(0)" style="background-image: url(imagens/onix9.jpeg);"></div>
+                <div class="foto-miniatura" onclick="selecionarFoto(1)" style="background-image: url(imagens/onix8.jpeg);"></div>
+                <div class="foto-miniatura" onclick="selecionarFoto(2)" style="background-image: url(imagens/onix7.jpeg);"></div>
+                <div class="foto-miniatura" onclick="selecionarFoto(3)" style="background-image: url(imagens/onix6.jpeg);"></div>
+                <div class="foto-miniatura" onclick="selecionarFoto(4)" style="background-image: url(imagens/onix5.jpeg);"></div>
+                <div class="foto-miniatura" onclick="selecionarFoto(5)" style="background-image: url(imagens/onix4.jpeg);"></div>
+                <div class="foto-miniatura" onclick="selecionarFoto(6)" style="background-image: url(imagens/onix3.jpeg);"></div>
+                <div class="foto-miniatura" onclick="selecionarFoto(7)" style="background-image: url(imagens/onix2.jpeg);"></div>
+                <div class="foto-miniatura" onclick="selecionarFoto(8)" style="background-image: url(imagens/onix1.jpeg);"></div>
+                <div class="foto-miniatura" onclick="selecionarFoto(9)" style="background-image: url(imagens/onix.jpeg);"></div>
+                
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="header-venda">
+                <div class="titulo">
+                    <h1>Chevrolet Onix Joy 1.0</h1>
+                    <p>Ano 2019 • Automático</p>
+                    <p>Localização: Foz do Iguaçu, PR</p>
+                </div>
+                <div class="preco">R$ 49.900</div>
+                
+            </div>
+
+            <div class="detalhes-grid">
+                <div class="detalhe-item">
+                    <span>Quilometragem</span>
+                    <strong>90.000 km</strong>
+                </div>
+                <div class="detalhe-item">
+                    <span>Combustível</span>
+                    <strong>Flex</strong>
+                </div>
+                <div class="detalhe-item">
+                    <span>Cor</span>
+                    <strong>Branca</strong>
+                </div>
+                <div class="detalhe-item">
+                    <span>Condição</span>
+                    <strong>Muito bom</strong>
+                </div>
+            </div>
+
+            <div class="descricao">
+                <h3>Descrição do Vendedor</h3>
+                <p>🚗 Chevrolet Onix Joy 1.0 (2019) – Impecável e Econômico
+                O carro ideal para quem busca economia, baixo custo de manutenção e conforto para o dia a dia.
+                Este Onix Joy está em excelente estado de conservação, com pintura brilhando e interior extremamente bem cuidado (conforme as fotos). É um veículo conhecido pela sua robustez e excelente valor de revenda.
+                <br>✅ Destaques do Veículo:
+                Motorização: 1.0 Flex (altíssima economia de combustível).
+                Câmbio: Manual de 6 marchas (proporciona mais conforto e economia na estrada).
+                Conforto: Ar-condicionado gelando, direção elétrica progressiva e vidros elétricos dianteiros.
+                Segurança: Freios ABS e Airbags frontais.
+                Interior: Bancos em tecido em perfeito estado, painel moderno e som instalado.
+                Visual: Cor branca (fácil manutenção) com calotas originais e pneus em ótimo estado.
+                <br>📋 Informações Adicionais:
+                Placa Mercosul.
+                Documentação em dia e pronto para transferência.
+                Mecânica revisada e sujeita a qualquer exame. </p>
+            </div>
+
+            <a href="https://wa.me/5545998447358?text=Olá,%20tenho%20interesse%20no%20Chevrolet%20Onix%20anunciado!" target="_blank" class="btn-whatsapp">
+                <svg viewBox="0 0 24 24">
+                    <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.4.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.713-1.457L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.864-9.742.002-2.602-1.005-5.05-2.83-6.877-1.827-1.827-4.257-2.833-6.858-2.834-5.44 0-9.863 4.371-9.867 9.743-.001 1.774.485 3.5 1.407 5.01L1.87 21.147l4.777-1.993zM17.46 15.3c-.313-.156-1.854-.914-2.141-1.018-.287-.104-.497-.156-.705.156-.208.312-.807 1.018-.988 1.225-.181.208-.363.234-.677.078-1.32-.662-2.189-1.15-3.064-2.653-.23-.396.23-.367.659-1.22.078-.156.039-.292-.019-.396-.059-.104-.5-.1.71-.1.196-.48.204-.761.104-.968-.103-.208-.503-1.233-.689-1.685-.181-.433-.365-.375-.503-.382-.13-.006-.279-.007-.428-.007-.15 0-.392.056-.597.28-.205.225-.783.765-.783 1.866 0 1.1 1.002 2.186 1.14 2.343.14.157 1.943 2.97 4.707 4.16.658.283 1.173.453 1.574.58.66.21 1.26.18 1.735.11.53-.08 1.62-.663 1.85-1.302.23-.64.23-1.186.16-1.302-.07-.116-.258-.172-.572-.328z"/>
+                </svg>
+                Falar com o Vendedor
+            </a>
+        </div>
+    </div>
+
+    <script src="efeitos.js"></script>
+</body>
+</html>
